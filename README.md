@@ -1,5 +1,4 @@
 # Sistema de gerenciamento de ordens de servico
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
 
 # Sobre o projeto
 
@@ -22,37 +21,38 @@ acesso pleno a todas as funcionalidades do sistema, dentre essas funcionalidades
 - clonar repositório
 - configurar br.com.infox.dal -> moduloConexao (Usando as configurações do seu banco de dados)
 - Comandos no MySQL:
-CREATE DATABASE dbinfox;
-create table tbusuarios(
-iduser int primary key,
-usuario varchar (50) not null,
-fone varchar(20),
-login varchar(15) not null unique,
-senha varchar(15) not null
-);
-CREATE TABLE tbclientes (
-idcli INT AUTO_INCREMENT PRIMARY KEY,
-nomecli VARCHAR(40) not null,
-endcli VARCHAR(150),
-fonecli VARCHAR(20),
-emailcli VARCHAR(30),
-);
-create table tbos(
-os int primary key auto_increment,
-data_os timestamp default current_timestamp,
-situacao varchar(40) not null,
-tipo varchar(30) not null,
-equipamento varchar(150) not null,
-defeito varchar(200) not null,
-servico varchar(150),
-tecnico varchar(30),
-valor decimal(10,2),
-idcli int not null,
-foreign key(idcli) references tbclientes(idcli)
-);
-insert into tbusuarios(iduser, usuario, fone, login, senha)
-values(1, 'adm', '999999-9999', 'adm', '');
-- Através do Eclipse rode a "TelaLogin", preencha login como "adm" e senha vazia.
+  
+CREATE DATABASE dbinfox;  
+create table tbusuarios(  
+iduser int primary key,  
+usuario varchar (50) not null,  
+fone varchar(20),  
+login varchar(15) not null unique,  
+senha varchar(15) not null  
+);  
+CREATE TABLE tbclientes (  
+idcli INT AUTO_INCREMENT PRIMARY KEY,  
+nomecli VARCHAR(40) not null,  
+endcli VARCHAR(150),  
+fonecli VARCHAR(20),  
+emailcli VARCHAR(30),  
+);  
+create table tbos(  
+os int primary key auto_increment,  
+data_os timestamp default current_timestamp,  
+situacao varchar(40) not null,  
+tipo varchar(30) not null,  
+equipamento varchar(150) not null,  
+defeito varchar(200) not null,  
+servico varchar(150),  
+tecnico varchar(30),  
+valor decimal(10,2),  
+idcli int not null,  
+foreign key(idcli) references tbclientes(idcli)  
+);  
+insert into tbusuarios(iduser, usuario, fone, login, senha)  
+values(1, 'adm', '999999-9999', 'adm', '');  
+- Através do Eclipse rode a "TelaLogin", preencha login como "adm" e senha vazia.  
 
 # Autor
 
